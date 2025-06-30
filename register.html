@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register for an Event</h1>
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" required pattern="[0-9]{10}" maxlength="10">
+
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email ID" required>
+
+            <label for="event">Select Event</label>
+            <select id="event" name="event" required>
+                <option value="">-- Choose an Event --</option>
+                <option>Wedding</option>
+                <option>Birthday Party</option>
+                <option>Corporate Meeting</option>
+                <option>Conference</option>
+                <option>Fashion Show</option>
+                <option>Music Concert</option>
+                <option>Anniversary</option>
+                <option>Charity Gala</option>
+                <option>Workshop</option>
+                <option>Seminar</option>
+                <option>Retirement Party</option>
+                <option>Farewell Party</option>
+                <option>Engagement</option>
+                <option>Baby Shower</option>
+                <option>College Fest</option>
+                <option>School Function</option>
+                <option>DJ Night</option>
+                <option>Cultural Festival</option>
+                <option>Science Exhibition</option>
+                <option>Book Fair</option>
+                <option>Job Fair</option>
+                <option>Marathon</option>
+                <option>Art Exhibition</option>
+                <option>Startup Pitch</option>
+                <option>Photography Contest</option>
+                <option>Film Festival</option>
+                <option>Stand-up Comedy</option>
+                <option>Gaming Tournament</option>
+                <option>Online Webinar</option>
+                <option>Hackathon</option>
+                <option>Product Launch</option>
+                <option>Drama Show</option>
+                <option>Road Show</option>
+                <option>Dance Competition</option>
+                <option>Pet Show</option>
+                <option>Car Expo</option>
+                <option>Tech Conference</option>
+                <option>Religious Event</option>
+                <option>Cooking Contest</option>
+                <option>Food Festival</option>
+                <option>Music Festival</option>
+                <option>Social Gathering</option>
+                <option>Reunion</option>
+                <option>Talent Hunt</option>
+            </select>
+
+            <label for="date">Event Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Event Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Book/Register</button>
+        </form>
+    </div>
+</body>
+</html>
