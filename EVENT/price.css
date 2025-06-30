@@ -1,0 +1,118 @@
+/* Base Styles */
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background:#996699;
+  color:#330033;
+  animation: fadeInPage 1s ease-in-out;
+ 
+}
+
+/* Header */
+header {
+  background:#330033;
+  color:#996699;
+  padding: 30px 0;
+  text-align: center;
+  animation: slideDownHeader 1.2s ease forwards;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color:#996699;
+}
+
+/* Main Content */
+main {
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* Grid Layout for Events */
+.event-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Event Card */
+.event {
+  background:#663366;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInCard 1s forwards;
+  animation-delay: calc(var(--i) * 0.08s);
+}
+
+.event:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.07);
+}
+
+.event h2 {
+  margin: 0 0 10px;
+  font-size: 1.1em;
+  color:#330033;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 1.3em;
+  color:#CCCCCC;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Footer */
+footer {
+  background:#330033;
+  color:#996699;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+  animation: fadeInFooter 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDownHeader {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInFooter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

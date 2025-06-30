@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+body {
+   font-family: 'Georgia', serif;
+  background:#A69DB5;
+  color:#996699;
+}
+
+.header {
+  background-color:#330033;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color:#996699;
+  font-weight: bold;
+  
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color:#996699;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color:#CCCCCC;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  background:#996699;
+  text-align:center;
+}
+
+.hero-text {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color:#330033;
+}
+
+.hero-text p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color:#330033;
+}
+
+.btn {
+  display: inline-block;
+  background-color:#330033;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn:hover{
+background-color:#663366;
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.features {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color:#996699;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color:#996699;
+  margin-bottom: 2rem;
+ 
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color:#663366;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  color:#330033;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  color:#CCCCCC;
+}
+
+.footer {
+  text-align: center;
+  background-color:#330033;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color:#996699;
+}

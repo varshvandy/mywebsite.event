@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events | Crystal Crown Events</title>
+  <link rel="stylesheet" href="events.css"/>
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">Crystal Crown Events</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+		<li><a href="service.html">Service</a></li>
+        <li><a href="event.html">Events</a></li>
+        <li><a href="price-details.html">Price-Details</a></li>
+        <li><a href="contact.html">Contact</a></li>      </ul>
+    </nav>
+  </header>
+
+  <section class="events-section">
+    <h1>Upcoming Unbooked Events</h1>
+    <p>Here are the premium slots currently available. Book now before they're gone!</p>
+
+    <div class="events-container">
+      <!-- Event Item 1 -->
+      <div class="event-box">
+        <img src="dream wedding.jpeg" alt="Wedding Venue" />
+        <h3>Dream Wedding Setup</h3>
+        <p>Bangalore  25th July 2025</p>
+      </div>
+
+      <!-- Event Item 2 -->
+      <div class="event-box">
+        <img src="leadership summit.jpeg" alt="Corporate Seminar" />
+        <h3>Leadership Summit</h3>
+        <p>Hyderabad  30th July 2025</p>
+      </div>
+
+      <!-- Event Item 3 -->
+      <div class="event-box">
+        <img src="carnival.jpeg" alt="Birthday Party" />
+        <h3>Kids Carnival Birthday</h3>
+        <p>Chennai  5th August 2025</p>
+      </div>
+
+      <!-- Event Item 4 -->
+      <div class="event-box">
+        <img src="retro.jpg" alt="Concert Event" />
+        <h3>Retro Music Night</h3>
+        <p>Pune  10th August 2025</p>
+      </div>
+
+      <!-- Event Item 5 -->
+      <div class="event-box">
+        <img src="engagement.jpeg" alt="Engagement" />
+        <h3>Engagement Royale</h3>
+        <p>Delhi  15th August 2025</p>
+      </div>
+
+      <!-- Event Item 6 -->
+      <div class="event-box">
+        <img src="elite.jpeg" alt="Fashion Show" />
+        <h3>Elite Fashion Gala</h3>
+        <p>Mumbai  18th August 2025</p>
+      </div>
+
+      <!-- Event Item 7 -->
+      <div class="event-box">
+        <img src="street.jpeg" alt="Food Festival" />
+        <h3>Street Food Fiesta</h3>
+        <p>Kolkata  20th August 2025</p>
+      </div>
+
+      <!-- Event Item 8 -->
+      <div class="event-box">
+        <img src="baby blossom.jpeg" alt="Baby Shower" />
+        <h3>Baby Blossom Bash</h3>
+        <p>Ahmedabad  22nd August 2025</p>
+      </div>
+
+      <!-- Event Item 9 -->
+      <div class="event-box">
+        <img src="annual.jpeg" alt="Award Night" />
+        <h3>Annual Award Function</h3>
+        <p>Jaipur  24th August 2025</p>
+      </div>
+
+      <!-- Event Item 10 -->
+      <div class="event-box">
+        <img src="fest.jpeg" alt="College Fest" />
+        <h3>Campus Cultural Fest</h3>
+        <p>Lucknow  26th August 2025</p>
+      </div>
+    </div>
+  </section>
+  <!-- Registration Form Popup -->
+<div id="register-popup" class="popup-form" style="display: none;">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <h2>Register for Event</h2>
+    <form>
+      <label>Event Place:</label>
+      <input type="text" id="eventPlace" readonly />
+
+      <label>Purpose:</label>
+      <input type="text" placeholder="Enter event purpose" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" placeholder="Enter phone number" required />
+
+      <label>Email ID:</label>
+      <input type="email" placeholder="Enter email" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+  <footer class="footer">
+    <p> 2025 Crystal Crown Events. Every event, a masterpiece in motion.</p>
+  </footer>
+<script>
+  function showForm(place) {
+    document.getElementById('register-popup').style.display = 'block';
+    document.getElementById('eventPlace').value = place;
+  }
+
+  function closeForm() {
+    document.getElementById('register-popup').style.display = 'none';
+  }
+
+  // Attach click listeners to event boxes
+  document.addEventListener("DOMContentLoaded", function() {
+    const boxes = document.querySelectorAll(".event-box");
+    boxes.forEach(box => {
+      const place = box.querySelector("p").innerText;
+      box.addEventListener("click", () => {
+        showForm(place);
+      });
+    });
+  });
+</script>
+<!-- Inside your .events-container -->
+<div class="events-container">
+
+  <div class="event-box" data-place="Dream Wedding Setup">
+    <img src="dream wedding.jpeg" alt="Wedding Venue" />
+    <h3>Dream Wedding Setup</h3>
+    <p>Bangalore 25th July 2025</p>
+  </div>
+
+  <!-- Repeat for other events -->
+</div>
+
+<!-- Registration Form Popup -->
+<div id="register-popup" class="popup-form" style="display: none;">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closeForm()">&times;</span>
+    <h2>Register for Event</h2>
+    <form id="registerForm">
+      <label>Event Place:</label>
+      <input type="text" id="eventPlace" name="place" readonly required />
+
+      <label>Purpose:</label>
+      <input type="text" name="purpose" required />
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required />
+
+      <label>Email ID:</label>
+      <input type="email" name="email" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<script>
+  let clickedEventBox = null;
+
+  // Show form and track clicked box
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".event-box");
+    boxes.forEach(box => {
+      const place = box.querySelector("h3").innerText;
+      box.addEventListener("click", () => {
+        clickedEventBox = box;
+        document.getElementById("register-popup").style.display = "flex";
+        document.getElementById("eventPlace").value = place;
+      });
+    });
+  });
+
+  // Close form
+  function closeForm() {
+    document.getElementById("register-popup").style.display = "none";
+  }
+
+  // Form submission with AJAX
+  document.getElementById("registerForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch("submit.php", {
+      method: "POST",
+      body: formData
+    })
+      .then(res => res.text())
+      .then(data => {
+        alert(data); // Show success message
+        if (clickedEventBox) {
+          clickedEventBox.remove(); // Remove the clicked event from page
+        }
+        this.reset(); // Clear the form
+        closeForm();
+      })
+      .catch(err => {
+        alert("Error submitting form.");
+        closeForm();
+      });
+  });
+</script>
+</body>
+</html>
